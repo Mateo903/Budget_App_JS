@@ -1,4 +1,4 @@
-export const number_format = (amount, decimals) => {
+export const formatAmount = (amount, decimals) => {
   var sign = (amount.toString().substring(0, 1) === "-");
   amount += ''; 
   amount = parseFloat(amount.replace(/[^0-9.]/g, '')); 

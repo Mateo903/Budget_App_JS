@@ -1,4 +1,6 @@
 import React from 'react'
+import {formatAmount, formatDate} from '../../Constants'
+
 import './style.css'
 
 const RecordCard = ({concept, date, amount, toDelete, toEdit}) => {
@@ -13,10 +15,10 @@ const RecordCard = ({concept, date, amount, toDelete, toEdit}) => {
       <div className='information-container'>
         <div className='concept-container'>
           <h1>{concept}</h1>
-          <p>{date}</p>
+          <p>{formatDate(date)}</p>
         </div>
         <div className='mount-container'>
-          <h1>{amount}</h1>
+          <h1>{formatAmount(amount)}</h1>
         </div>
       </div>
       <div className='buttons-container'>
