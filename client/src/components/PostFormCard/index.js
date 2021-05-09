@@ -7,7 +7,7 @@ import axios from 'axios'
 
 
 
-const PostFormCard = () => {
+const PostFormCard = (props) => {
 
   const [accessAPI, setAccessAPI] = useState({ type: 'GET', url: `${APIURL}/records/` });
   const [bodyData, setbodyData] = useState({});
@@ -25,6 +25,10 @@ const PostFormCard = () => {
   const reqAPI = async() =>{
 
     await axios({method: accessAPI.type, url: accessAPI.url, data: bodyData})
+
+    if (accessAPI.type === 'POST') {
+      props.sendForm()
+    }
 
   }
 

@@ -11,7 +11,7 @@ const settingArray = (array) => {
 }
 
 
-const ShowRecords = ({ update, url='', type, putfromlast=()=>{}}) => {
+const ShowRecords = ({ update, url='', type, sendPut=()=>{}}) => {
   const [accessAPI, setAccessAPI] = useState({ type: type || 'GET', url: url || APIURL+'/records/' });
   const [bodyData, setbodyData] = useState({})
   const [dataAPI, setDataAPI] = useState([])
@@ -32,7 +32,7 @@ const ShowRecords = ({ update, url='', type, putfromlast=()=>{}}) => {
       
     }else{
       setAccessAPI({ type: 'GET', url: url })
-      putfromlast()
+      sendPut()
     }
 
   }

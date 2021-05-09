@@ -4,7 +4,7 @@ import axios from 'axios'
 
 
 
-const Balance = (props) => {
+const Balance = ({update}) => {
   const [accessAPI, setAccessAPI] = useState({ type:'GET', url: APIURL+'/records/' });
   const [dataAPI, setDataAPI] = useState([]);
 
@@ -26,7 +26,7 @@ const Balance = (props) => {
   useEffect(()=>{
     reqAPI()
 
-  }, [])
+  }, [update])
 
   return (
     <div>
