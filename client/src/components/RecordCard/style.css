@@ -60,7 +60,7 @@
   font-size: 15px;
 }
 
-.button-container{
+.buttons-container{
   width: 10%;
   height: 80%;
   display: flex;
@@ -69,3 +69,14 @@
   align-items: center;
 }
 
+.edit{
+  font-size: 13px;
+  color: #4E65D6;
+  cursor: pointer;
+}
+
+.trash{
+  font-size: 15px;
+  color: #F00;
+  cursor: pointer;
+}
