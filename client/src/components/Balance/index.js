@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import {formatAmount} from '../../Constants'
+import {formatAmount, APIURL} from '../../Constants'
 import axios from 'axios'
 
 
 
 const Balance = (props) => {
-  const [accessAPI, setAccessAPI] = useState({ type:'GET', url: 'http://192.168.0.115:9000/api/records' });
+  const [accessAPI, setAccessAPI] = useState({ type:'GET', url: APIURL+'/records/' });
   const [dataAPI, setDataAPI] = useState([]);
 
   const reqAPI = async() =>{

@@ -44,3 +44,5 @@ export const formatDate = (date) => {
   const monthName = months[parseInt(mes)]
   return(dia +" "+monthName+" "+ano)
 }
+
+export const APIURL = 'http://192.168.0.115:9000/api'
