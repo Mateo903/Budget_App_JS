@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import {formatDateInput} from '../../Constants'
 import './style.css'
 
 
@@ -10,7 +11,7 @@ const PutFormCard = ({prevConcept, prevAmount,prevDate,toRecordCard, sendPutForm
   
   const [record, setRecord] = useState({
     concept:prevConcept,
-    date:prevDate,
+    date: formatDateInput(prevDate),
     amount:prevAmount,
     type:1, //type: 1 means income, type: -1 means expenses
   })
@@ -23,6 +24,8 @@ const PutFormCard = ({prevConcept, prevAmount,prevDate,toRecordCard, sendPutForm
       ...prevState,
       [name]: value
     }))
+
+    console.log(prevDate,'and', date)
    
   }
 

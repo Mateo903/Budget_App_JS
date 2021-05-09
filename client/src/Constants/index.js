@@ -45,4 +45,17 @@ export const formatDate = (date) => {
   return(dia +" "+monthName+" "+ano)
 }
 
-export const APIURL = 'http://192.168.0.115:9000/api'
+export const formatDateInput = (date) => {
+  var fecha = new Date(date); 
+  var mes = fecha.getMonth()+1; 
+  var dia = fecha.getDate(); 
+  var ano = fecha.getFullYear(); 
+  if(dia<10){
+    dia='0'+dia;} 
+  if(mes<10){
+    mes='0'+mes} 
+  return(ano+"-"+mes+"-"+dia)
+}
+
+
+export const APIURL = 'http://localhost:9000/api'
