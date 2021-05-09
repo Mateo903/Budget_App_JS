@@ -27,7 +27,7 @@ routes.post('/records', (req, res) => {
     conn.query('INSERT INTO records set ?',[record], (err, resp) => {
       if (err) return res.send(err)
 
-      res.json(resp)
+      res.send('Record Create Succefully')
     });
   });
 });
