@@ -20,8 +20,8 @@ const RecordCard = ({concept, date, amount, toDelete, toEdit}) => {
         </div>
       </div>
       <div className='buttons-container'>
-        <div onClick={toEdit}></div>
-        <div onClick={toDelete}></div>
+        <div onClick={toEdit}><i className="far fa-edit edit"></i></div>
+        <div onClick={toDelete}><i className="far fa-trash-alt trash"></i></div>
       </div>
     </div>
   )
