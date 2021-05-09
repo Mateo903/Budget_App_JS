@@ -6,7 +6,7 @@ import './style.css'
 const RecordCard = ({concept, date, amount, toDelete, toEdit}) => {
   
   const classNameCard = am => {
-    return am < 0 ? 'card-container gasto' : 'card-container';
+    return am < 0 ? 'card-container out' : 'card-container';
   }
 
   return (
