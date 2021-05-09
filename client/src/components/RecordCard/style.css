@@ -1,0 +1,71 @@
+.card-container{
+  margin:auto;
+  width: 65vw;
+  height: 80px;
+  border-radius: 5px;
+  margin: 10px 0 10px 0;
+  background-color: #bdecb6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 2px #999;
+
+}
+
+.card-container.gasto{
+  background-color: #ff9688;
+}
+
+.space-container{
+  
+  width: 5%;
+}
+
+.information-container{
+ 
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.concept-container{
+
+  text-align: start;
+  display: flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+
+}
+
+.concept-container h1{
+
+  font-size: 15px;
+}
+
+.concept-container p{
+
+  color: #444;
+  font-size: 12px;
+}
+
+.mount-container{
+  text-align: start;
+  display: flex;
+  align-items: center;
+}
+
+.mount-container h1{
+  font-size: 15px;
+}
+
+.button-container{
+  width: 10%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
