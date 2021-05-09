@@ -13,7 +13,7 @@ const PutFormCard = ({prevConcept, prevAmount,prevDate,toRecordCard, sendPutForm
     concept:prevConcept,
     date: formatDateInput(prevDate),
     amount:prevAmount,
-    type:1, //type: 1 means income, type: -1 means expenses
+    type: prevAmount < 0 ? -1 : 1, //type: 1 means income, type: -1 means expenses
   })
 
   const {concept, date, amount, type} = record //deconstructoring
@@ -24,8 +24,10 @@ const PutFormCard = ({prevConcept, prevAmount,prevDate,toRecordCard, sendPutForm
       ...prevState,
       [name]: value
     }))
-
-    console.log(prevDate,'and', date)
+    setRecord(prevState => ({
+      ...prevState,
+      amount: Math.abs((parseFloat(prevState.amount!=='' ? prevState.amount : 0)))*type
+    }))
    
   }
 
@@ -35,10 +37,14 @@ const PutFormCard = ({prevConcept, prevAmount,prevDate,toRecordCard, sendPutForm
     e.preventDefault()
   }
 
+
+  const classNameCard = am => {
+    return am < 0 ? 'putform-container out' : 'putform-container';
+  }
  
 
   return (
-    <form onSubmit={e => handleSubmit(e)} className='putform-container'>
+    <form onSubmit={e => handleSubmit(e)} className={classNameCard(prevAmount)}>
       <div className='space'></div>
       <div className='fields-container'>
         <div className='concept-date-container'>

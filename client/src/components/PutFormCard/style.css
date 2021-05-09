@@ -4,11 +4,15 @@
   height: 80px;
   border-radius: 5px;
   margin: 10px 0 10px 0;
-  background-color: #eeeeee;
+  background-color: #bdecb6;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 2px 2px 2px #999;
+}
+
+.putform-container.out {
+  background-color: #ff9688;
 }
 
 
