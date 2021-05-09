@@ -4,14 +4,14 @@ import './style.css'
 
 
 
-const PutFormCard = ({toRecordCard, sendPutForm, id}) => {
+const PutFormCard = ({prevConcept, prevAmount,prevDate,toRecordCard, sendPutForm, id}) => {
 
 
   
   const [record, setRecord] = useState({
-    concept:'',
-    date:'',
-    amount:0,
+    concept:prevConcept,
+    date:prevDate,
+    amount:prevAmount,
     type:1, //type: 1 means income, type: -1 means expenses
   })
 
