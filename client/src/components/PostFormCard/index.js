@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {formatDateInput, APIURL} from '../../Constants'
 import './style.css'
-
 import axios from 'axios'
 
 
@@ -14,7 +13,7 @@ const PostFormCard = (props) => {
 
   const [record, setRecord] = useState({
     concept:'',
-    date:'',
+    date:'flag',
     amount:0,
     type:1,
   })
@@ -45,12 +44,19 @@ const PostFormCard = (props) => {
 
 
   useEffect( () => {
-    setRecord(prevState => ({
-      ...prevState,
-      date: formatDateInput(new Date())
-    }))
 
+    //Execute this code only the first time//
+    if (record.date==='flag'){
+      setRecord(prevState => ({
+        ...prevState,
+        date: formatDateInput(new Date())
+      }))
+    }
+    //---------------------------//
+    
     reqAPI()
+    
+
   // eslint-disable-next-line react-hooks/exhaustive-deps
   },[accessAPI.type, accessAPI.url, bodyData])
 
@@ -93,7 +99,7 @@ const PostFormCard = (props) => {
         </div>
         
         <div className='amount-container'>
-          <select value={type} onChange={handleChange} name="type">
+          <select className='select-field' value={type} onChange={handleChange} name="type">
 
             <option value={1}>ingreso</option>
 
@@ -104,8 +110,9 @@ const PostFormCard = (props) => {
                   name='amount' 
                   onChange={handleChange} 
                   placeholder='monto' 
-                  type='number'  
+                  type='number'
            />
+
         </div>
       </div>
       <div className='buttons-container'>

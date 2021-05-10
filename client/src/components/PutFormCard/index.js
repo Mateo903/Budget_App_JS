@@ -26,9 +26,8 @@ const PutFormCard = ({prevConcept, prevAmount,prevDate,toRecordCard, sendPutForm
     }))
     setRecord(prevState => ({
       ...prevState,
-      amount: Math.abs((parseFloat(prevState.amount!=='' ? prevState.amount : 0)))*type
+      amount: Math.abs(Number(prevState.amount))*type
     }))
-   
   }
 
 
@@ -70,9 +69,8 @@ const PutFormCard = ({prevConcept, prevAmount,prevDate,toRecordCard, sendPutForm
           <input  className='amount-field' 
                   name='amount' 
                   onChange={handleChange} 
-                  placeholder='monto' 
+                  placeholder={Math.abs(prevAmount)} 
                   type='number' 
-                  value={amount!==0 ? Math.abs(amount): ''} 
           />
         </div>
 
