@@ -5,6 +5,7 @@ import Balance from '../../components/Balance'
 import PostFormCard from '../../components/PostFormCard'
 import ShowRecords from '../../components/ShowRecords'
 import './style.css'
+import Navbar from '../../components/Navbar'
 
 const Home = () => {
   const [consulta, setConsulta] = useState({type:'GET', url:`${APIURL}/lasttenrecords/`, update: true})
@@ -16,6 +17,7 @@ const Home = () => {
 
   return (
     <div className='home'>
+      <Navbar/>
       <div className='balance-container' >
         <label>BALANCE</label>
         <Balance update={consulta.update}/>
