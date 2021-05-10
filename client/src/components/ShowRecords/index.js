@@ -3,6 +3,7 @@ import {APIURL} from '../../Constants'
 import RecordCard from '../RecordCard'
 import PutFormCard from '../PutFormCard'
 import axios from 'axios'
+import './style.css'
 
 
 // SET ARRAY FOR SHOW
@@ -72,7 +73,7 @@ const ShowRecords = ({ update, url='', type, sendPut=()=>{}}) => {
 
 
   return (
-    <div>
+    <div className='showrecords'>
       {dataAPI.map(e => {
         return  (  
           e.isEdit ?

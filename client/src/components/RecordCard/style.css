@@ -9,7 +9,8 @@
   justify-content: center;
   align-items: center;
   box-shadow: 2px 2px 2px #999;
-
+  max-width: 1500px;
+  min-width: 300px;
 }
 
 .card-container.out{
