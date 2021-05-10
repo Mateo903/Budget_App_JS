@@ -9,9 +9,7 @@ const AllRecords = () => {
   const history = useHistory()
 
   const handleChange = (e) => {
-    console.log(e.target.value)
     setConsulta(e.target.value)
-    console.log(consulta)
   }
 
 
@@ -24,9 +22,9 @@ const AllRecords = () => {
 
         <option value={`${APIURL}/records/`}>Todos</option>
         
-        <option value={`${APIURL}/records/expenses/`}>Ingresos</option>
+        <option value={`${APIURL}/records/expenses/`}>Egresos</option>
 
-        <option value={`${APIURL}/records/incomes/`}>Egresos</option>
+        <option value={`${APIURL}/records/incomes/`}>Ingresos</option>
 
       </select>
       </div>

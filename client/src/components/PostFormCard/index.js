@@ -59,7 +59,6 @@ const PostFormCard = (props) => {
   }
 
   const readForm = (newConcept,newDate,newAmount) => {
-    console.log(newConcept,newDate,newAmount)
 
     setAccessAPI({type: 'POST', url:`${APIURL}/records/`})
 
