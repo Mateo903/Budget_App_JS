@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import { useHistory } from 'react-router'
 import {APIURL} from '../../Constants'
 import ShowRecords from '../../components/ShowRecords'
+import Navbar from '../../components/Navbar'
 import './style.css'
 
 const AllRecords = () => {
@@ -15,6 +16,7 @@ const AllRecords = () => {
 
   return (
     <div className='container'>
+      <Navbar/>
       <h1>Listado de todos los records</h1>
       <button onClick={()=>history.push('/')}>VOLVER</button>
       <div>
