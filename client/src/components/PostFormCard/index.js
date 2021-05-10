@@ -51,6 +51,7 @@ const PostFormCard = (props) => {
     }))
 
     reqAPI()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[accessAPI.type, accessAPI.url, bodyData])
 
   const handleSubmit = (e) =>{
