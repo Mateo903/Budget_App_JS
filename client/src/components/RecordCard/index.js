@@ -18,7 +18,7 @@ const RecordCard = ({concept, date, amount, toDelete, toEdit}) => {
           <p>{formatDate(date)}</p>
         </div>
         <div className='mount-container'>
-          <h1>{formatAmount(amount)}</h1>
+          <h1>{formatAmount(amount,2)}</h1>
         </div>
       </div>
       <div className='buttons-container'>
