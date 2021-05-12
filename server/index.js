@@ -7,6 +7,9 @@ const routes = require('./routes')
 
 const app = express()
 app.set('port', process.env.PORT || 9000)
+
+//----------------PROPERTIES FOR DATABASE ACCESSS---------------------
+
 const dbOptions = {
   host: 'localhost',
   port: 3306,
@@ -14,6 +17,8 @@ const dbOptions = {
   password: 'root',
   database: 'BudgetApp'
 }
+
+//----------------------------------------------------------------
 
 
 // middleware -----------------
@@ -31,5 +36,5 @@ app.use('/api', routes)
 // server running --------------------
 
 app.listen(app.get('port'), ()=>{
-  console.log('server runninr on port', app.get('port'))
+  console.log('server running on port', app.get('port'))
 })
